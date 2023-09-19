@@ -14,7 +14,6 @@ function Navbar() {
         {/* <!-- left this comment on purpose -->  */}
         <ul className="nav-links" id="nav-links">
           {pageLinks.map((link) => {
-            const { id, href, text } = link
             return (
               <li key={link.id}>
                 <a href={link.href} className="nav-link">
@@ -30,7 +29,12 @@ function Navbar() {
             const { id, href, icon } = link
             return (
               <li key={id}>
-                <a href={href} target="_blank" className="nav-icon">
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="nav-icon"
+                >
                   <i className={icon}></i>
                 </a>
               </li>
